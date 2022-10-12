@@ -17,7 +17,7 @@ pipeline {
                         git pull origin test
                         git checkout dev
                         git pull origin dev
-                        git merge test
+                        git merge origin test
                         git push origin dev
 
 
