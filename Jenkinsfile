@@ -14,6 +14,7 @@ pipeline {
                         git clone ${browsers[i]}
                         git checkout prod
                         git pull origin dev
+                        remove remote
                         """ 
                     }
                 }
