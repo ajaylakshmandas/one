@@ -14,7 +14,7 @@ pipeline {
                         git clone ${repo[i]}
                         git checkout prod
                         git pull origin prod
-                        git checkout dev
+                        git remove remote        
                         """ 
                     }
                 }
