@@ -12,7 +12,7 @@ pipeline {
                         echo "Testing the ${browsers[i]} browser"
                         bat """
                         git clone ${browsers[i]}
-                        git checkout dev
+                        git checkout prod
                         git pull origin dev
                         """ 
                     }
