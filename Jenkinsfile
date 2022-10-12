@@ -14,6 +14,7 @@ pipeline {
                         git branch
                         git status
                         git remote set-url origin ${repo[i]}
+                        git clone ${repo[i]}
                         git status
                         git branch
                         git checkout dev
