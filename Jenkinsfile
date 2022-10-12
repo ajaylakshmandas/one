@@ -15,9 +15,9 @@ pipeline {
                         git init
                         git fetch --all
                         git checkout test
-                        git pull origin test
+                        git pull origin test --allow-unrelated-historiesorigin 
                         git checkout dev
-                        git pull origin dev
+                        git pull origin dev --allow-unrelated-historiesorigin
                         git merge upstream/test
                         git push origin dev                        
                         """ 
