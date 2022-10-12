@@ -12,7 +12,8 @@ pipeline {
                     def browsers = ['https://github.com/ajaylakshmandas/one.git', 'firefox']
                     for (int i = 0; i < browsers.size(); i++) {
                         echo "Testing the ${browsers[i]} browser"
-                        git clone ${browsers[i]}
+                        bat """ git clone ${browsers[i]}
+                        """ 
                     }
                 }
             }
