@@ -14,8 +14,8 @@ pipeline {
                         echo "Testing the ${browsers[i]} browser"
                         bat """
                         git clone ${browsers[i]}
-                        git checkout test
-                        git pull
+                        git checkout origin test
+                        git pull origin test
                         """ 
                     }
                 }
