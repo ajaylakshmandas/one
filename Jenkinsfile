@@ -13,8 +13,8 @@ pipeline {
                         bat """
                         git remote set-url origin ${repo[i]}
                         git branch
-                        git checkout prod
-                        git pull origin prod
+                        git checkout test
+                        git pull origin test
                         """ 
                     }
                 }
