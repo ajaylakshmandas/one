@@ -15,6 +15,7 @@ pipeline {
                         git init
                         git fetch --all
                         git checkout test
+                        git pull --rebase development
                         git pull origin test --allow-unrelated-historiesorigin 
                         git checkout dev
                         git pull origin dev --allow-unrelated-historiesorigin
