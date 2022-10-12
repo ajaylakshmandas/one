@@ -19,7 +19,6 @@ pipeline {
                         git branch
                         git checkout dev
                         git pull origin dev
-                        git remote rm ${repo[i]}
                         """ 
                     }
                 }
