@@ -7,14 +7,14 @@ pipeline {
 
                 script {
                     bat '''git init '''
-                    def browsers = ['https://github.com/ajaylakshmandas/one.git', 'https://github.com/ajaylakshmandas/two.git']
-                    for (int i = 0; i < browsers.size(); ++i) {
-                        echo "Testing the ${browsers[i]} browser"
+                    def repo = ['https://github.com/ajaylakshmandas/one.git', 'https://github.com/ajaylakshmandas/two.git']
+                    for (int i = 0; i < repo.size(); ++i) {
+                        echo "Testing the ${repo[i]} browser"
                         bat """
-                        git clone ${browsers[i]}
+                        git clone ${repo[i]}
                         git checkout prod
-                        git pull origin dev
-                        remove remote
+                        git pull origin prod
+                        git checkout dev
                         """ 
                     }
                 }
