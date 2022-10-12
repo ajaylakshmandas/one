@@ -6,16 +6,14 @@ pipeline {
                 echo 'Hello World'
 
                 script {
-                    bat '''git init
-                    git branch
-                    git status'''                    
+                    bat '''git init '''
                     def browsers = ['https://github.com/ajaylakshmandas/one.git', 'https://github.com/ajaylakshmandas/two.git','https://github.com/ajaylakshmandas/three.git']
                     for (int i = 0; i < browsers.size(); i++) {
                         echo "Testing the ${browsers[i]} browser"
                         bat """
                         git clone ${browsers[i]}
-                        git checkout origin test
-                        git pull origin test
+                        git checkout dev
+                        git pull origin dev
                         """ 
                     }
                 }
