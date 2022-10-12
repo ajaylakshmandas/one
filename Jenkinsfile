@@ -4,8 +4,6 @@ pipeline {
         stage('Example') {
             steps {
                 echo 'Hello World'
-<<<<<<< HEAD
-
                 script {
                     bat '''git init '''
                     def repo = ['https://github.com/ajaylakshmandas/one.git','https://github.com/ajaylakshmandas/two.git']
