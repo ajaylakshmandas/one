@@ -13,17 +13,13 @@ pipeline {
                         bat """
                         git remote set-url origin ${repo[i]}
                         git init
-                        git fetch origin
+                        git fetch --all
                         git checkout test
                         git pull origin test
                         git checkout dev
                         git pull origin dev
-                        git merge origin test
-                        git push origin dev
-
-
-
-                        
+                        git merge upstream/test
+                        git push origin dev                        
                         """ 
                     }
                 }
