@@ -17,8 +17,8 @@ pipeline {
                         git status
                         git branch
                         git checkout dev
-                        git pull dev
-                        git remote rm origin
+                        git pull origin dev
+                        git remote rm ${repo[i]}
                         """ 
                     }
                 }
