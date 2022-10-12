@@ -12,7 +12,17 @@ pipeline {
                         echo "Testing the ${repo[i]} browser"
                         bat """
                         git remote set-url origin ${repo[i]}
-                        git clone ${repo[i]}
+                        git init
+                        git checkout test
+                        git pull origin test
+                        git checkout dev
+                        git pull origin dev
+                        git merge test
+                        git push origin dev
+
+
+
+                        
                         """ 
                     }
                 }
