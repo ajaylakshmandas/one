@@ -11,10 +11,10 @@ pipeline {
                     for (int i = 0; i < repo.size(); ++i) {
                         echo "Testing the ${repo[i]} browser"
                         bat """
-                        git clone ${repo[i]}
+                        git remote set-url origin ${repo[i]}
+                        git branch
                         git checkout prod
                         git pull origin prod
-                        git remove remote        
                         """ 
                     }
                 }
