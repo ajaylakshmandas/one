@@ -13,6 +13,7 @@ pipeline {
                         bat """
                         git remote set-url origin ${repo[i]}
                         git init
+                        git fetch origin
                         git checkout test
                         git pull origin test
                         git checkout dev
